@@ -1,0 +1,1172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC44CFC3-1355-4017-8E46-96B69344336E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SaccoBook</RootNamespace>
+    <AssemblyName>SaccoBook</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v19.1.Win, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.1.Drawing, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Presets, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Win, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\Libraries\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAttachment.Designer.cs">
+      <DependentUpon>AddAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppResources\AppConstants.cs" />
+    <Compile Include="AppResources\AppFunctions.cs" />
+    <Compile Include="AppResources\DatabaseConnection.cs" />
+    <Compile Include="AppResources\DevexpressFunctions.cs" />
+    <Compile Include="AppResources\EmailFunctions.cs" />
+    <Compile Include="AppResources\LoanCalculation.cs" />
+    <Compile Include="AppResources\MakerChecker.cs" />
+    <Compile Include="AppResources\Navigation.cs" />
+    <Compile Include="AppResources\RegexFunctions.cs" />
+    <Compile Include="AppResources\XMLFormatter.cs" />
+    <Compile Include="AppSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSplashScreen.Designer.cs">
+      <DependentUpon>AppSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppWaitForm.Designer.cs">
+      <DependentUpon>AppWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attachments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attachments.Designer.cs">
+      <DependentUpon>Attachments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DevExpress.cs" />
+    <Compile Include="Classes\Dividends.cs" />
+    <Compile Include="Classes\GeneralLedger.cs" />
+    <Compile Include="Classes\IncomeExpenses.cs" />
+    <Compile Include="Classes\CreditProducts.cs" />
+    <Compile Include="Classes\MakerChecker.cs" />
+    <Compile Include="Classes\Members.cs" />
+    <Compile Include="Classes\Notification.cs" />
+    <Compile Include="Classes\SavingsProducts.cs" />
+    <Compile Include="Classes\Shares.cs" />
+    <Compile Include="Classes\SaccoBook.cs" />
+    <Compile Include="ConfirmLoggedUserPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmLoggedUserPassword.Designer.cs">
+      <DependentUpon>ConfirmLoggedUserPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\MainDashboard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\MainDashboard.Designer.cs">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\Members.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\Members.Designer.cs">
+      <DependentUpon>Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\SavingsDashboard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\SavingsDashboard.Designer.cs">
+      <DependentUpon>SavingsDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataImport\ImportMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\DataImport\ImportMembers.Designer.cs">
+      <DependentUpon>ImportMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EF\appointment.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\appprovaldocumentsetting.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\approvalentry.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\approvaluser.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\attachment.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\branch.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\country.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\generalledgeraccount.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\guarantor.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\loanprocucttype.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\member.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\memberbankaccount.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\memberbeneficiary.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\memberkin.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\memberloan.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\memberloanrepayment.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\membermonthlycontribution.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\membersaving.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\membersavingsaccount.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\membersharecapital.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\notification.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\notificationtemplate.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\notificationtemplatesetting.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\numbersery.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\paymentsheader.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\resource.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\role.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SaccoBookModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaccoBookModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SaccoBookModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SaccoBookModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaccoBookModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EF\savingsaccounttype.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Signatory.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\systemuser.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\sytemsetting.cs">
+      <DependentUpon>SaccoBookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Midtier\Loans.cs" />
+    <Compile Include="Modules\ApprovalEntries\ApprovedLoanDisbursement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ApprovalEntries\ApprovedLoanDisbursement.Designer.cs">
+      <DependentUpon>ApprovedLoanDisbursement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ApprovalEntries\ViewApprovalEntries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ApprovalEntries\ViewApprovalEntries.Designer.cs">
+      <DependentUpon>ViewApprovalEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Branches\SaccoBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Branches\SaccoBranch.Designer.cs">
+      <DependentUpon>SaccoBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Branches\ViewBranches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Branches\ViewBranches.Designer.cs">
+      <DependentUpon>ViewBranches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Dividends\CalculateDividends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Dividends\CalculateDividends.Designer.cs">
+      <DependentUpon>CalculateDividends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Expenses\Expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Expenses\Expense.Designer.cs">
+      <DependentUpon>Expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\CashReceiptJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\CashReceiptJournal.Designer.cs">
+      <DependentUpon>CashReceiptJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\CashReceiptJournalLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\CashReceiptJournalLine.Designer.cs">
+      <DependentUpon>CashReceiptJournalLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\PaymentJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\PaymentJournal.Designer.cs">
+      <DependentUpon>PaymentJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\GLAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\GLAccount.Designer.cs">
+      <DependentUpon>GLAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\PaymentJournalLines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\GeneralLedger\PaymentJournalLines.Designer.cs">
+      <DependentUpon>PaymentJournalLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanDisbursement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanDisbursement.Designer.cs">
+      <DependentUpon>LoanDisbursement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanGuarantor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanGuarantor.Designer.cs">
+      <DependentUpon>LoanGuarantor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanGuarantors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanGuarantors.Designer.cs">
+      <DependentUpon>LoanGuarantors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanRepayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Loans\LoanRepayment.Designer.cs">
+      <DependentUpon>LoanRepayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Loans\ViewLoans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Loans\ViewLoans.Designer.cs">
+      <DependentUpon>ViewLoans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\BankAccounts\BankAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\BankAccounts\BankAccount.Designer.cs">
+      <DependentUpon>BankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\BankAccounts\ViewBankAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\BankAccounts\ViewBankAccounts.Designer.cs">
+      <DependentUpon>ViewBankAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Beneficiaries\BeneficiaryInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Beneficiaries\BeneficiaryInformation.Designer.cs">
+      <DependentUpon>BeneficiaryInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Beneficiaries\ViewBeneficiaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Beneficiaries\ViewBeneficiaries.Designer.cs">
+      <DependentUpon>ViewBeneficiaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\GroupMembership\GroupMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\GroupMembership\GroupMembership.Designer.cs">
+      <DependentUpon>GroupMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\GroupMembership\AddSignatory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\GroupMembership\AddSignatory.Designer.cs">
+      <DependentUpon>AddSignatory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Kins\KinInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Kins\KinInformation.Designer.cs">
+      <DependentUpon>KinInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Kins\ViewKins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\Kins\ViewKins.Designer.cs">
+      <DependentUpon>ViewKins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SaccoMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SaccoMember.Designer.cs">
+      <DependentUpon>SaccoMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SaccoMemberInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SaccoMemberInformation.Designer.cs">
+      <DependentUpon>SaccoMemberInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SavingsAccounts\MemberSavingsAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SavingsAccounts\MemberSavingsAccount.Designer.cs">
+      <DependentUpon>MemberSavingsAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SavingsAccounts\ViewSavingsAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\SavingsAccounts\ViewSavingsAccounts.Designer.cs">
+      <DependentUpon>ViewSavingsAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\ViewMembersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SaccoMembers\ViewMembersList.Designer.cs">
+      <DependentUpon>ViewMembersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\MakeSaving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\MakeSaving.Designer.cs">
+      <DependentUpon>MakeSaving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\SavingsAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\SavingsAccount.Designer.cs">
+      <DependentUpon>SavingsAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\SavingsAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\SavingsAccounts.Designer.cs">
+      <DependentUpon>SavingsAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\SavingsStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Savings\SavingsStatement.Designer.cs">
+      <DependentUpon>SavingsStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\ViewSavingsWithdrawals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\ViewSavingsWithdrawals.Designer.cs">
+      <DependentUpon>ViewSavingsWithdrawals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Withdrawal\MakeWithdrawal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SavingsWithdrawals\Withdrawal\MakeWithdrawal.Designer.cs">
+      <DependentUpon>MakeWithdrawal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\DocumentApprovals\ApprovalDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\DocumentApprovals\ApprovalDocument.Designer.cs">
+      <DependentUpon>ApprovalDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\DocumentApprovals\DocumentApprovalUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\DocumentApprovals\DocumentApprovalUser.Designer.cs">
+      <DependentUpon>DocumentApprovalUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\DocumentApprovals\DocumentApprovers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\DocumentApprovals\DocumentApprovers.Designer.cs">
+      <DependentUpon>DocumentApprovers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Loans\LoanProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Loans\LoanProduct.Designer.cs">
+      <DependentUpon>LoanProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Loans\LoanProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Loans\LoanProducts.Designer.cs">
+      <DependentUpon>LoanProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\AssignDocumentTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\AssignDocumentTemplate.Designer.cs">
+      <DependentUpon>AssignDocumentTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\DocumentTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\DocumentTemplates.Designer.cs">
+      <DependentUpon>DocumentTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\NotificationSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\NotificationSettings.Designer.cs">
+      <DependentUpon>NotificationSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\NotificationTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\NotificationTemplate.Designer.cs">
+      <DependentUpon>NotificationTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\ViewNotificationTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Notifications\ViewNotificationTemplates.Designer.cs">
+      <DependentUpon>ViewNotificationTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\NumberSeries\AssignedNumberSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\NumberSeries\AssignedNumberSeries.Designer.cs">
+      <DependentUpon>AssignedNumberSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Sacco\SaccoInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Sacco\SaccoInformation.Designer.cs">
+      <DependentUpon>SaccoInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Savings\SavingsAccountType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Savings\SavingsAccountType.Designer.cs">
+      <DependentUpon>SavingsAccountType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Savings\SavingsAccountTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Savings\SavingsAccountTypes.Designer.cs">
+      <DependentUpon>SavingsAccountTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\UserRoles\CreateRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\UserRoles\CreateRole.Designer.cs">
+      <DependentUpon>CreateRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\NumberSeries\NumberSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\NumberSeries\NumberSeries.Designer.cs">
+      <DependentUpon>NumberSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SystemUsers\CreateSystemUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SystemUsers\CreateSystemUser.Designer.cs">
+      <DependentUpon>CreateSystemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\Database\DatabaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\Database\DatabaseConfig.Designer.cs">
+      <DependentUpon>DatabaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\NumberSeries\DefineRecordNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\NumberSeries\DefineRecordNumbers.Designer.cs">
+      <DependentUpon>DefineRecordNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Settings\UserRoles\DefineRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings\UserRoles\DefineRole.Designer.cs">
+      <DependentUpon>DefineRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SystemUsers\SystemUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SystemUsers\SystemUser.Designer.cs">
+      <DependentUpon>SystemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SystemUsers\ViewSystemUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SystemUsers\ViewSystemUsers.Designer.cs">
+      <DependentUpon>ViewSystemUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\ExpensesNavigation.cs" />
+    <Compile Include="Navigation\LoansNavigation.cs" />
+    <Compile Include="Navigation\MembersNavigation.cs" />
+    <Compile Include="Navigation\MenuItems.cs" />
+    <Compile Include="Navigation\ReportsNavigation.cs" />
+    <Compile Include="Navigation\SavingsNavigation.cs" />
+    <Compile Include="Navigation\SharesDividendsNavigation.cs" />
+    <Compile Include="Navigation\SystemNavigation.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterSoftware.Designer.cs">
+      <DependentUpon>RegisterSoftware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dividends\Templates\MemberDividends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Dividends\Templates\MemberDividends.Designer.cs">
+      <DependentUpon>MemberDividends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GL\TrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\GL\TrialBalance.Designer.cs">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Loans\LoansAwardedReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Loans\LoansAwardedReport.Designer.cs">
+      <DependentUpon>LoansAwardedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Loans\LoanBalancesReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Loans\LoanBalancesReport.Designer.cs">
+      <DependentUpon>LoanBalancesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Loans\LoanDefaultersReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Loans\LoanDefaultersReport.Designer.cs">
+      <DependentUpon>LoanDefaultersReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Loans\LoanRepaymentStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Loans\LoanRepaymentStatement.Designer.cs">
+      <DependentUpon>LoanRepaymentStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Members\KinsSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Members\KinsSubreport.Designer.cs">
+      <DependentUpon>KinsSubreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Members\MemberInformation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Members\MemberInformation.Designer.cs">
+      <DependentUpon>MemberInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Members\MemberList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Members\MemberList.Designer.cs">
+      <DependentUpon>MemberList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PeriodChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PeriodChooser.Designer.cs">
+      <DependentUpon>PeriodChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SavingsWithdrawals\Member\MemberSavingsWithdrawal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SavingsWithdrawals\Member\MemberSavingsWithdrawal.Designer.cs">
+      <DependentUpon>MemberSavingsWithdrawal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SavingsWithdrawals\Sacco\SaccoSavingsWithdrawal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SavingsWithdrawals\Sacco\SaccoSavingsWithdrawal.Designer.cs">
+      <DependentUpon>SaccoSavingsWithdrawal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EF\ApprovalEntriesQueries.cs" />
+    <Compile Include="EF\AttachmentsQueries.cs" />
+    <Compile Include="EF\BankQueries.cs" />
+    <Compile Include="EF\BeneficiariesQueries .cs" />
+    <Compile Include="EF\DividendsQueries.cs" />
+    <Compile Include="EF\DocumentApprovalsQueries.cs" />
+    <Compile Include="EF\GeneralLedgerQueries.cs" />
+    <Compile Include="EF\GroupQueries.cs" />
+    <Compile Include="EF\KinsQueries.cs" />
+    <Compile Include="EF\LoansQueries.cs" />
+    <Compile Include="EF\MemberQueries.cs" />
+    <Compile Include="EF\NotificationTemplatesQueries.cs" />
+    <Compile Include="EF\NumberSeriesQueries.cs" />
+    <Compile Include="EF\SaccoBranchQueries.cs" />
+    <Compile Include="EF\SavingsQueries.cs" />
+    <Compile Include="EF\SystemSettingsQueries.cs" />
+    <Compile Include="EF\SystemUserQueries.cs" />
+    <Compile Include="EF\UserRoleQueries.cs" />
+    <Compile Include="SQL\ApprovalEntriesQueries.cs" />
+    <Compile Include="SQL\AttachmentsQueries.cs" />
+    <Compile Include="SQL\BankQueries.cs" />
+    <Compile Include="SQL\DividendsQueries.cs" />
+    <Compile Include="SQL\DocumentApprovalsQueries.cs" />
+    <Compile Include="SQL\GeneralLedgerQueries.cs" />
+    <Compile Include="SQL\BeneficiariesQueries .cs" />
+    <Compile Include="SQL\GroupQueries.cs" />
+    <Compile Include="SQL\KinsQueries.cs" />
+    <Compile Include="SQL\LoansQueries.cs" />
+    <Compile Include="SQL\MemberQueries.cs" />
+    <Compile Include="SQL\NotificationTemplatesQueries.cs" />
+    <Compile Include="SQL\NumberSeriesQueries.cs" />
+    <Compile Include="SQL\SaccoBranchQueries.cs" />
+    <Compile Include="SQL\SavingsQueries.cs" />
+    <Compile Include="SQL\SystemSettingsQueries.cs" />
+    <Compile Include="SQL\SystemUserQueries.cs" />
+    <Compile Include="SQL\UserRoleQueries.cs" />
+    <Compile Include="Support.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Support.Designer.cs">
+      <DependentUpon>Support.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\AfricasTalkingGateway.cs" />
+    <Compile Include="Utilities\BackgroundTasksManager.cs" />
+    <Compile Include="Utilities\EnCryptDecrypt.cs" />
+    <Compile Include="Utilities\Log.cs" />
+    <Compile Include="Utilities\LDAPAuthenticator.cs" />
+    <Compile Include="Utilities\Secure.cs" />
+    <Compile Include="Utilities\StringFormatter.cs" />
+    <Compile Include="Utilities\SystemInformation.cs" />
+    <Compile Include="Utilities\TimeManager.cs" />
+    <Compile Include="Utilities\WindowsLogin.cs" />
+    <Compile Include="Utilities\ZipStorer.cs" />
+    <Compile Include="ViewDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDashboard.Designer.cs">
+      <DependentUpon>ViewDashboard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAttachment.resx">
+      <DependentUpon>AddAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSplashScreen.resx">
+      <DependentUpon>AppSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppWaitForm.resx">
+      <DependentUpon>AppWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attachments.resx">
+      <DependentUpon>Attachments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmLoggedUserPassword.resx">
+      <DependentUpon>ConfirmLoggedUserPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\MainDashboard.resx">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\Members.resx">
+      <DependentUpon>Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\SavingsDashboard.resx">
+      <DependentUpon>SavingsDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\DataImport\ImportMembers.resx">
+      <DependentUpon>ImportMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ApprovalEntries\ApprovedLoanDisbursement.resx">
+      <DependentUpon>ApprovedLoanDisbursement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ApprovalEntries\ViewApprovalEntries.resx">
+      <DependentUpon>ViewApprovalEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Branches\SaccoBranch.resx">
+      <DependentUpon>SaccoBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Branches\ViewBranches.resx">
+      <DependentUpon>ViewBranches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Dividends\CalculateDividends.resx">
+      <DependentUpon>CalculateDividends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Expenses\Expense.resx">
+      <DependentUpon>Expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GeneralLedger\CashReceiptJournal.resx">
+      <DependentUpon>CashReceiptJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GeneralLedger\CashReceiptJournalLine.resx">
+      <DependentUpon>CashReceiptJournalLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GeneralLedger\PaymentJournal.resx">
+      <DependentUpon>PaymentJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GeneralLedger\GLAccount.resx">
+      <DependentUpon>GLAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GeneralLedger\PaymentJournalLines.resx">
+      <DependentUpon>PaymentJournalLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Loans\LoanDisbursement.resx">
+      <DependentUpon>LoanDisbursement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Loans\LoanGuarantor.resx">
+      <DependentUpon>LoanGuarantor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Loans\LoanGuarantors.resx">
+      <DependentUpon>LoanGuarantors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Loans\LoanRepayment.resx">
+      <DependentUpon>LoanRepayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Loans\ViewLoans.resx">
+      <DependentUpon>ViewLoans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\BankAccounts\BankAccount.resx">
+      <DependentUpon>BankAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\BankAccounts\ViewBankAccounts.resx">
+      <DependentUpon>ViewBankAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\Beneficiaries\BeneficiaryInformation.resx">
+      <DependentUpon>BeneficiaryInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\Beneficiaries\ViewBeneficiaries.resx">
+      <DependentUpon>ViewBeneficiaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\GroupMembership\GroupMembership.resx">
+      <DependentUpon>GroupMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\GroupMembership\AddSignatory.resx">
+      <DependentUpon>AddSignatory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\Kins\KinInformation.resx">
+      <DependentUpon>KinInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\Kins\ViewKins.resx">
+      <DependentUpon>ViewKins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\SaccoMember.resx">
+      <DependentUpon>SaccoMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\SaccoMemberInformation.resx">
+      <DependentUpon>SaccoMemberInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\SavingsAccounts\MemberSavingsAccount.resx">
+      <DependentUpon>MemberSavingsAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\SavingsAccounts\ViewSavingsAccounts.resx">
+      <DependentUpon>ViewSavingsAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SaccoMembers\ViewMembersList.resx">
+      <DependentUpon>ViewMembersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SavingsWithdrawals\Savings\MakeSaving.resx">
+      <DependentUpon>MakeSaving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SavingsWithdrawals\Savings\SavingsAccount.resx">
+      <DependentUpon>SavingsAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SavingsWithdrawals\Savings\SavingsAccounts.resx">
+      <DependentUpon>SavingsAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SavingsWithdrawals\Savings\SavingsStatement.resx">
+      <DependentUpon>SavingsStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SavingsWithdrawals\ViewSavingsWithdrawals.resx">
+      <DependentUpon>ViewSavingsWithdrawals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SavingsWithdrawals\Withdrawal\MakeWithdrawal.resx">
+      <DependentUpon>MakeWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Database\DatabaseConfig.resx">
+      <DependentUpon>DatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\DocumentApprovals\ApprovalDocument.resx">
+      <DependentUpon>ApprovalDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\DocumentApprovals\DocumentApprovalUser.resx">
+      <DependentUpon>DocumentApprovalUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\DocumentApprovals\DocumentApprovers.resx">
+      <DependentUpon>DocumentApprovers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Loans\LoanProduct.resx">
+      <DependentUpon>LoanProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Loans\LoanProducts.resx">
+      <DependentUpon>LoanProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Notifications\AssignDocumentTemplate.resx">
+      <DependentUpon>AssignDocumentTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Notifications\DocumentTemplates.resx">
+      <DependentUpon>DocumentTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Notifications\NotificationSettings.resx">
+      <DependentUpon>NotificationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Notifications\NotificationTemplate.resx">
+      <DependentUpon>NotificationTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Notifications\ViewNotificationTemplates.resx">
+      <DependentUpon>ViewNotificationTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\NumberSeries\AssignedNumberSeries.resx">
+      <DependentUpon>AssignedNumberSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\NumberSeries\DefineRecordNumbers.resx">
+      <DependentUpon>DefineRecordNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Sacco\SaccoInformation.resx">
+      <DependentUpon>SaccoInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Savings\SavingsAccountType.resx">
+      <DependentUpon>SavingsAccountType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\Savings\SavingsAccountTypes.resx">
+      <DependentUpon>SavingsAccountTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\UserRoles\CreateRole.resx">
+      <DependentUpon>CreateRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\NumberSeries\NumberSeries.resx">
+      <DependentUpon>NumberSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SystemUsers\CreateSystemUser.resx">
+      <DependentUpon>CreateSystemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Settings\UserRoles\DefineRole.resx">
+      <DependentUpon>DefineRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SystemUsers\SystemUser.resx">
+      <DependentUpon>SystemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SystemUsers\ViewSystemUsers.resx">
+      <DependentUpon>ViewSystemUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegisterSoftware.resx">
+      <DependentUpon>RegisterSoftware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Dividends\Templates\MemberDividends.resx">
+      <DependentUpon>MemberDividends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GL\TrialBalance.resx">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Loans\LoansAwardedReport.resx">
+      <DependentUpon>LoansAwardedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Loans\LoanBalancesReport.resx">
+      <DependentUpon>LoanBalancesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Loans\LoanDefaultersReport.resx">
+      <DependentUpon>LoanDefaultersReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Loans\LoanRepaymentStatement.resx">
+      <DependentUpon>LoanRepaymentStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Members\KinsSubreport.resx">
+      <DependentUpon>KinsSubreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Members\MemberInformation.resx">
+      <DependentUpon>MemberInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Members\MemberList.resx">
+      <DependentUpon>MemberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PeriodChooser.resx">
+      <DependentUpon>PeriodChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SavingsWithdrawals\Member\MemberSavingsWithdrawal.resx">
+      <DependentUpon>MemberSavingsWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SavingsWithdrawals\Sacco\SaccoSavingsWithdrawal.resx">
+      <DependentUpon>SaccoSavingsWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Support.resx">
+      <DependentUpon>Support.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDashboard.resx">
+      <DependentUpon>ViewDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="AppResources\nationalities.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EntityDeploy Include="EF\SaccoBookModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SaccoBookModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EF\SaccoBookModel.edmx.diagram">
+      <DependentUpon>SaccoBookModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Templates\MemberInformationTemplate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+    <Content Include="EF\SaccoBookModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SaccoBookModel.Context.cs</LastGenOutput>
+      <DependentUpon>SaccoBookModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="EF\SaccoBookModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SaccoBookModel.edmx</DependentUpon>
+      <LastGenOutput>SaccoBookModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Images\stamford.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AppIcon.ico" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Photos\Portrait_Placeholder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SaccoBook.ico" />
+    <Content Include="settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Shares\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

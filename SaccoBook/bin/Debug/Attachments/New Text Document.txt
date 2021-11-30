@@ -1,0 +1,20 @@
+KRCS~I 01080085131342 20200806.aes
+
+
+Show Which Loans are borrowed most
+
+Filter Most Loans Borrowed in a period
+
+Show total Members
+
+Filters Members Joined by Period
+
+Show Total Savings
+
+Filter Total savingsin a period
+
+Show Savings Account types Distribution Pie
+
+Plot Expenses Against Revenue Line graph
+
+         	

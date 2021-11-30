@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <ActiveSkin>Visual Studio 2013 Dark</ActiveSkin>
+  <MembersNumberSeriesCode>SB</MembersNumberSeriesCode>
+  <SavingsNumberSeriesCode>SAVINGS</SavingsNumberSeriesCode>
+  <WithdrawalsNumberSeriesCode>WDRW</WithdrawalsNumberSeriesCode>
+  <RepaymentNumberSeriesCode>REPAY</RepaymentNumberSeriesCode>
+  <SavingsAccountTypeNumberSeriesCode>SAV</SavingsAccountTypeNumberSeriesCode>
+</Settings>

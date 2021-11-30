@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="appointment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Start" Type="DateTime" Precision="0" />
+    <Property Name="End" Type="DateTime" Precision="0" />
+    <Property Name="ResourceID" Type="Int32" />
+    <Property Name="id_User" Type="Int32" />
+    <Property Name="AllDay" Type="Binary" MaxLength="1" FixedLength="true" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Label" Type="Int32" />
+    <Property Name="ResourceIDs" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ReminderInfo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CustomField1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="appprovaldocumentsetting">
+    <Key>
+      <PropertyRef Name="DocumentType" />
+    </Key>
+    <Property Name="DocumentType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApprovalSequences" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="approvalentry">
+    <Key>
+      <PropertyRef Name="EntryNumber" />
+    </Key>
+    <Property Name="EntryNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DocumentNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SequenceNumber" Type="Int32" Nullable="false" />
+    <Property Name="SenderId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApproverId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateTimeSentForApproval" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="approvaluser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Approver" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApprovalSequence" Type="Int32" Nullable="false" />
+    <Property Name="ApproverEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SubstituteApprover" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SubstituteApproverEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="attachment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Attachment1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileExtension" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="branch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BranchName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="num_code" />
+    </Key>
+    <Property Name="num_code" Type="Int32" Nullable="false" />
+    <Property Name="alpha_2_code" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="alpha_3_code" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="en_short_name" Type="String" MaxLength="52" FixedLength="false" Unicode="true" />
+    <Property Name="nationality" Type="String" MaxLength="39" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="generalledgeraccount">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ParentCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IncomeBalanceSheet" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DirectPosting" Type="Int16" Nullable="false" />
+    <Property Name="BudgetedAmount" Type="Double" Nullable="false" />
+    <Property Name="BalanceAtDate" Type="Double" Nullable="false" />
+    <Property Name="DebitAmount" Type="Double" Nullable="false" />
+    <Property Name="CreditAmount" Type="Double" Nullable="false" />
+    <Property Name="IsBlocked" Type="Int16" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guarantor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoanId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Names" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StaffPayroll" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Signatory" Type="Byte" Nullable="false" />
+    <Property Name="MustSign" Type="Byte" Nullable="false" />
+    <Property Name="MustBePresent" Type="Byte" Nullable="false" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Signature" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ExpiryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MemberNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EntryType" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nationality" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WorkStation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Employer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Residence" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OtherBankers" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Occupation" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PINNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AmountGuaranteed" Type="Double" Nullable="false" />
+    <NavigationProperty Name="memberloan" Relationship="Self.FK_guarantors_memberloans1" FromRole="guarantors" ToRole="memberloans" />
+  </EntityType>
+  <EntityType Name="loanprocucttype">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InterestRate" Type="Int32" Nullable="false" />
+    <Property Name="RequiresMakerChecker" Type="Byte" Nullable="false" />
+    <Property Name="InterestCalculationType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaximumLoanAmount" Type="Double" Nullable="false" />
+    <Property Name="MaxRepaymentPeriodInMonths" Type="Int32" Nullable="false" />
+    <Property Name="MinimumDepositContribution" Type="Double" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="memberbankaccount">
+    <Key>
+      <PropertyRef Name="MembershipNumber" />
+      <PropertyRef Name="AccountNumber" />
+    </Key>
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BankName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Branch" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_memberbankaccounts_members" FromRole="memberbankaccounts" ToRole="members" />
+  </EntityType>
+  <EntityType Name="memberbeneficiary">
+    <Key>
+      <PropertyRef Name="IdentificationDocumentNumber" />
+      <PropertyRef Name="MembershipNumber" />
+    </Key>
+    <Property Name="IdentificationDocumentNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Relationship" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Occupation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_memberbeneficiaries_members" FromRole="memberbeneficiaries" ToRole="members" />
+  </EntityType>
+  <EntityType Name="memberkin">
+    <Key>
+      <PropertyRef Name="IdentificationDocumentNumber" />
+      <PropertyRef Name="MembershipNumber" />
+    </Key>
+    <Property Name="IdentificationDocumentNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Relationship" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Occupation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_memberkins_members" FromRole="memberkins" ToRole="members" />
+  </EntityType>
+  <EntityType Name="memberloanrepayment">
+    <Key>
+      <PropertyRef Name="DocumentNumber" />
+    </Key>
+    <Property Name="DocumentNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoanId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PaidBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SourceAccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayingAccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BankReference" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Narration" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InstallmentAmount" Type="Double" Nullable="false" />
+    <Property Name="InterestAmount" Type="Double" Nullable="false" />
+    <Property Name="Balance" Type="Double" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="memberloan" Relationship="Self.FK_memberloanrepayments_memberloanrepayments" FromRole="memberloanrepayments" ToRole="memberloans" />
+  </EntityType>
+  <EntityType Name="memberloan">
+    <Key>
+      <PropertyRef Name="DocumentNumber" />
+    </Key>
+    <Property Name="DocumentNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoanType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoanAwardDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LoanRepaymentDeadlineDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="InterestRate" Type="Double" Nullable="false" />
+    <Property Name="InterestCalculationType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoanAmount" Type="Double" Nullable="false" />
+    <Property Name="RepaymentPeriodInMonths" Type="Double" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Balance" Type="Double" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="guarantors" Relationship="Self.FK_guarantors_memberloans1" FromRole="memberloans" ToRole="guarantors" />
+    <NavigationProperty Name="memberloanrepayments" Relationship="Self.FK_memberloanrepayments_memberloanrepayments" FromRole="memberloans" ToRole="memberloanrepayments" />
+    <NavigationProperty Name="member" Relationship="Self.FK_memberloans_members" FromRole="memberloans" ToRole="members" />
+  </EntityType>
+  <EntityType Name="membermonthlycontribution">
+    <Key>
+      <PropertyRef Name="MembershipNumber" />
+      <PropertyRef Name="AccountType" />
+    </Key>
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_membermonthlycontribution_members" FromRole="membermonthlycontribution" ToRole="members" />
+  </EntityType>
+  <EntityType Name="member">
+    <Key>
+      <PropertyRef Name="MembershipNumber" />
+    </Key>
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AlternativeNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Gender" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nationality" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NationalIdNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TaxPIN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SourceOfIncome" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayrollNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmployerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmployerTelephoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GrossMonthlyIncome" Type="Double" Nullable="false" />
+    <Property Name="DateJoined" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MembershipStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MembershipType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="memberbankaccounts" Relationship="Self.FK_memberbankaccounts_members" FromRole="members" ToRole="memberbankaccounts" />
+    <NavigationProperty Name="memberbeneficiaries" Relationship="Self.FK_memberbeneficiaries_members" FromRole="members" ToRole="memberbeneficiaries" />
+    <NavigationProperty Name="memberkins" Relationship="Self.FK_memberkins_members" FromRole="members" ToRole="memberkins" />
+    <NavigationProperty Name="memberloans" Relationship="Self.FK_memberloans_members" FromRole="members" ToRole="memberloans" />
+    <NavigationProperty Name="membermonthlycontributions" Relationship="Self.FK_membermonthlycontribution_members" FromRole="members" ToRole="membermonthlycontribution" />
+    <NavigationProperty Name="membersavings" Relationship="Self.FK_membersavings_members" FromRole="members" ToRole="membersavings" />
+    <NavigationProperty Name="membersavingsaccounts" Relationship="Self.FK_membersavingsaccounts_members" FromRole="members" ToRole="membersavingsaccounts" />
+    <NavigationProperty Name="Signatories" Relationship="Self.FK_Signatories_Signatories" FromRole="members" ToRole="Signatories" />
+  </EntityType>
+  <EntityType Name="membersaving">
+    <Key>
+      <PropertyRef Name="DocumentNumber" />
+    </Key>
+    <Property Name="DocumentNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TransactionType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SourceAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Destination" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DestinationAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="GLAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreditAmount" Type="Double" Nullable="false" />
+    <Property Name="DebitAmount" Type="Double" Nullable="false" />
+    <Property Name="TransactionAmount" Type="Double" />
+    <Property Name="Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_membersavings_members" FromRole="membersavings" ToRole="members" />
+  </EntityType>
+  <EntityType Name="membersavingsaccount">
+    <Key>
+      <PropertyRef Name="AccountNumber" />
+    </Key>
+    <Property Name="AccountNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MembershipNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreditAmount" Type="Double" Nullable="false" />
+    <Property Name="DebitAmount" Type="Double" Nullable="false" />
+    <Property Name="Balance" Type="Double" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_membersavingsaccounts_members" FromRole="membersavingsaccounts" ToRole="members" />
+    <NavigationProperty Name="membersavingsaccounts1" Relationship="Self.FK_membersavingsaccounts_membersavingsaccounts" FromRole="membersavingsaccounts" ToRole="membersavingsaccounts1" />
+    <NavigationProperty Name="membersavingsaccount1" Relationship="Self.FK_membersavingsaccounts_membersavingsaccounts" FromRole="membersavingsaccounts1" ToRole="membersavingsaccounts" />
+  </EntityType>
+  <EntityType Name="membersharecapital">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MemberNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Amount" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecipientName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailSubject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsEmailSent" Type="Int16" Nullable="false" />
+    <Property Name="ReciepientMobileNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SMSBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsSMSSent" Type="Int16" Nullable="false" />
+    <Property Name="DateTimeSent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notificationtemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Document" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailTemplate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SMSTemplate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notificationtemplatesetting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NotificationTemplateId" Type="Int32" Nullable="false" />
+    <Property Name="NotificationsEnabled" Type="Byte" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="numbersery">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StartingNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EndingNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastUsedNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="paymentsheader">
+    <Key>
+      <PropertyRef Name="DocumentNumber" />
+    </Key>
+    <Property Name="DocumentNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DocumentDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Currency" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Payee" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Posted" Type="Int16" Nullable="false" />
+    <Property Name="DateTimePosted" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalPaymentAmount" Type="Double" Nullable="false" />
+    <Property Name="PayingBankAccount" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PaymentType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DimCode1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DimCode2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BankName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalVATAmount" Type="Double" Nullable="false" />
+    <Property Name="TotalWHTAmount" Type="Double" Nullable="false" />
+    <Property Name="TotalNetAmount" Type="Double" Nullable="false" />
+    <Property Name="ChequeNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayMode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ChequeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="resource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CanLogin" Type="Int16" Nullable="false" />
+    <Property Name="IsMasterAdmin" Type="Int16" Nullable="false" />
+    <Property Name="CanAddUser" Type="Int16" Nullable="false" />
+    <Property Name="CanAddKin" Type="Int16" Nullable="false" />
+    <Property Name="CanViewMemberProfile" Type="Int16" Nullable="false" />
+    <Property Name="CanEditUser" Type="Int16" Nullable="false" />
+    <Property Name="CanDeleteUser" Type="Int16" Nullable="false" />
+    <Property Name="CanAddSavings" Type="Int16" Nullable="false" />
+    <Property Name="CanAddWithdrawal" Type="Int16" Nullable="false" />
+    <Property Name="CanAddBulkSavings" Type="Int16" Nullable="false" />
+    <Property Name="CanAddLoan" Type="Int16" Nullable="false" />
+    <Property Name="CanAddLoanRepayment" Type="Int16" Nullable="false" />
+    <Property Name="CanViewRepaymentHistory" Type="Int16" Nullable="false" />
+    <Property Name="CanViewLoanGuarantors" Type="Int16" Nullable="false" />
+    <Property Name="CanEditLoan" Type="Int16" Nullable="false" />
+    <Property Name="CanDeleteLoan" Type="Int16" Nullable="false" />
+    <Property Name="CanAddShares" Type="Int16" Nullable="false" />
+    <Property Name="CanViewShares" Type="Int16" Nullable="false" />
+    <Property Name="CanAddExpenses" Type="Int16" Nullable="false" />
+    <Property Name="CanEditExpenses" Type="Int16" Nullable="false" />
+    <Property Name="CanDeleteExpenses" Type="Int16" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="savingsaccounttype">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MinimumOpeningBalance" Type="Double" Nullable="false" />
+    <Property Name="MinimumMonthlyContributions" Type="Double" Nullable="false" />
+    <Property Name="MaximumAmountWithdrawableInADay" Type="Double" Nullable="false" />
+    <Property Name="WithdrawalCharge" Type="Double" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Signatory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupMembershipNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Names" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StaffPayroll" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Signatory1" Type="Byte" Nullable="false" />
+    <Property Name="MustSign" Type="Byte" Nullable="false" />
+    <Property Name="MustBePresent" Type="Byte" Nullable="false" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Signature" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ExpiryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MemberNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EntryType" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nationality" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WorkStation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Employer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Residence" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="OtherBankers" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Occupation" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PINNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_Signatories_Signatories" FromRole="Signatories" ToRole="members" />
+  </EntityType>
+  <EntityType Name="systemuser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WindowsUsername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RoleID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="sytemsetting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fax" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HomePage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="AfricasTalkingUsername" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AfricasTalkingAPIKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SMSNotificationsEnabled" Type="Int16" Nullable="false" />
+    <Property Name="SMTPServer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SMTPServerPort" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailNotificationsEnabled" Type="Int16" Nullable="false" />
+    <Property Name="AutomaticDatabaseBackUpEnabled" Type="Int16" Nullable="false" />
+    <Property Name="DatabaseBackUpPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CredentialType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModifiedAt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_guarantors_memberloans1">
+    <End Role="memberloans" Type="Self.memberloan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="guarantors" Type="Self.guarantor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="memberloans">
+        <PropertyRef Name="DocumentNumber" />
+      </Principal>
+      <Dependent Role="guarantors">
+        <PropertyRef Name="LoanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_memberbankaccounts_members">
+    <End Role="members" Type="Self.member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="memberbankaccounts" Type="Self.memberbankaccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="memberbankaccounts">
+        <PropertyRef Name="MembershipNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_memberbeneficiaries_members">
+    <End Role="members" Type="Self.member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="memberbeneficiaries" Type="Self.memberbeneficiary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="memberbeneficiaries">
+        <PropertyRef Name="MembershipNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_memberkins_members">
+    <End Role="members" Type="Self.member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="memberkins" Type="Self.memberkin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="memberkins">
+        <PropertyRef Name="MembershipNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_memberloanrepayments_memberloanrepayments">
+    <End Role="memberloans" Type="Self.memberloan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="memberloanrepayments" Type="Self.memberloanrepayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="memberloans">
+        <PropertyRef Name="DocumentNumber" />
+      </Principal>
+      <Dependent Role="memberloanrepayments">
+        <PropertyRef Name="LoanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_memberloans_members">
+    <End Role="members" Type="Self.member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="memberloans" Type="Self.memberloan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="memberloans">
+        <PropertyRef Name="MembershipNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_membermonthlycontribution_members">
+    <End Role="members" Type="Self.member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="membermonthlycontribution" Type="Self.membermonthlycontribution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="membermonthlycontribution">
+        <PropertyRef Name="MembershipNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_membersavings_members">
+    <End Role="members" Type="Self.member" Multiplicity="1" />
+    <End Role="membersavings" Type="Self.membersaving" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="membersavings">
+        <PropertyRef Name="MembershipNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_membersavingsaccounts_members">
+    <End Role="members" Type="Self.member" Multiplicity="1" />
+    <End Role="membersavingsaccounts" Type="Self.membersavingsaccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="membersavingsaccounts">
+        <PropertyRef Name="MembershipNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Signatories_Signatories">
+    <End Role="members" Type="Self.member" Multiplicity="1" />
+    <End Role="Signatories" Type="Self.Signatory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="MembershipNumber" />
+      </Principal>
+      <Dependent Role="Signatories">
+        <PropertyRef Name="GroupMembershipNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_membersavingsaccounts_membersavingsaccounts">
+    <End Role="membersavingsaccounts" Type="Self.membersavingsaccount" Multiplicity="1" />
+    <End Role="membersavingsaccounts1" Type="Self.membersavingsaccount" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="membersavingsaccounts">
+        <PropertyRef Name="AccountNumber" />
+      </Principal>
+      <Dependent Role="membersavingsaccounts1">
+        <PropertyRef Name="AccountNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SaccoBookEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="appointments" EntityType="Self.appointment" />
+    <EntitySet Name="appprovaldocumentsettings" EntityType="Self.appprovaldocumentsetting" />
+    <EntitySet Name="approvalentries" EntityType="Self.approvalentry" />
+    <EntitySet Name="approvalusers" EntityType="Self.approvaluser" />
+    <EntitySet Name="attachments" EntityType="Self.attachment" />
+    <EntitySet Name="branches" EntityType="Self.branch" />
+    <EntitySet Name="countries" EntityType="Self.country" />
+    <EntitySet Name="generalledgeraccounts" EntityType="Self.generalledgeraccount" />
+    <EntitySet Name="guarantors" EntityType="Self.guarantor" />
+    <EntitySet Name="loanprocucttypes" EntityType="Self.loanprocucttype" />
+    <EntitySet Name="memberbankaccounts" EntityType="Self.memberbankaccount" />
+    <EntitySet Name="memberbeneficiaries" EntityType="Self.memberbeneficiary" />
+    <EntitySet Name="memberkins" EntityType="Self.memberkin" />
+    <EntitySet Name="memberloanrepayments" EntityType="Self.memberloanrepayment" />
+    <EntitySet Name="memberloans" EntityType="Self.memberloan" />
+    <EntitySet Name="membermonthlycontributions" EntityType="Self.membermonthlycontribution" />
+    <EntitySet Name="members" EntityType="Self.member" />
+    <EntitySet Name="membersavings" EntityType="Self.membersaving" />
+    <EntitySet Name="membersavingsaccounts" EntityType="Self.membersavingsaccount" />
+    <EntitySet Name="membersharecapitals" EntityType="Self.membersharecapital" />
+    <EntitySet Name="notifications" EntityType="Self.notification" />
+    <EntitySet Name="notificationtemplates" EntityType="Self.notificationtemplate" />
+    <EntitySet Name="notificationtemplatesettings" EntityType="Self.notificationtemplatesetting" />
+    <EntitySet Name="numberseries" EntityType="Self.numbersery" />
+    <EntitySet Name="paymentsheaders" EntityType="Self.paymentsheader" />
+    <EntitySet Name="resources" EntityType="Self.resource" />
+    <EntitySet Name="roles" EntityType="Self.role" />
+    <EntitySet Name="savingsaccounttypes" EntityType="Self.savingsaccounttype" />
+    <EntitySet Name="Signatories" EntityType="Self.Signatory" />
+    <EntitySet Name="systemusers" EntityType="Self.systemuser" />
+    <EntitySet Name="sytemsettings" EntityType="Self.sytemsetting" />
+    <AssociationSet Name="FK_guarantors_memberloans1" Association="Self.FK_guarantors_memberloans1">
+      <End Role="memberloans" EntitySet="memberloans" />
+      <End Role="guarantors" EntitySet="guarantors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_memberbankaccounts_members" Association="Self.FK_memberbankaccounts_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="memberbankaccounts" EntitySet="memberbankaccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_memberbeneficiaries_members" Association="Self.FK_memberbeneficiaries_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="memberbeneficiaries" EntitySet="memberbeneficiaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_memberkins_members" Association="Self.FK_memberkins_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="memberkins" EntitySet="memberkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_memberloanrepayments_memberloanrepayments" Association="Self.FK_memberloanrepayments_memberloanrepayments">
+      <End Role="memberloans" EntitySet="memberloans" />
+      <End Role="memberloanrepayments" EntitySet="memberloanrepayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_memberloans_members" Association="Self.FK_memberloans_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="memberloans" EntitySet="memberloans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_membermonthlycontribution_members" Association="Self.FK_membermonthlycontribution_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="membermonthlycontribution" EntitySet="membermonthlycontributions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_membersavings_members" Association="Self.FK_membersavings_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="membersavings" EntitySet="membersavings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_membersavingsaccounts_members" Association="Self.FK_membersavingsaccounts_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="membersavingsaccounts" EntitySet="membersavingsaccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Signatories_Signatories" Association="Self.FK_Signatories_Signatories">
+      <End Role="members" EntitySet="members" />
+      <End Role="Signatories" EntitySet="Signatories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_membersavingsaccounts_membersavingsaccounts" Association="Self.FK_membersavingsaccounts_membersavingsaccounts">
+      <End Role="membersavingsaccounts" EntitySet="membersavingsaccounts" />
+      <End Role="membersavingsaccounts1" EntitySet="membersavingsaccounts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

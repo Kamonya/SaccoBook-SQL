@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="SaccoBookEntities">
+    <EntitySetMapping Name="appointments">
+      <EntityTypeMapping TypeName="Model.appointment">
+        <MappingFragment StoreEntitySet="appointments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="End" ColumnName="End" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="id_User" ColumnName="id_User" />
+          <ScalarProperty Name="AllDay" ColumnName="AllDay" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="ResourceIDs" ColumnName="ResourceIDs" />
+          <ScalarProperty Name="ReminderInfo" ColumnName="ReminderInfo" />
+          <ScalarProperty Name="CustomField1" ColumnName="CustomField1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="appprovaldocumentsettings">
+      <EntityTypeMapping TypeName="Model.appprovaldocumentsetting">
+        <MappingFragment StoreEntitySet="appprovaldocumentsettings">
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="ApprovalSequences" ColumnName="ApprovalSequences" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="approvalentries">
+      <EntityTypeMapping TypeName="Model.approvalentry">
+        <MappingFragment StoreEntitySet="approvalentries">
+          <ScalarProperty Name="EntryNumber" ColumnName="EntryNumber" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="SequenceNumber" ColumnName="SequenceNumber" />
+          <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+          <ScalarProperty Name="ApproverId" ColumnName="ApproverId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateTimeSentForApproval" ColumnName="DateTimeSentForApproval" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="approvalusers">
+      <EntityTypeMapping TypeName="Model.approvaluser">
+        <MappingFragment StoreEntitySet="approvalusers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="Approver" ColumnName="Approver" />
+          <ScalarProperty Name="ApprovalSequence" ColumnName="ApprovalSequence" />
+          <ScalarProperty Name="ApproverEmail" ColumnName="ApproverEmail" />
+          <ScalarProperty Name="SubstituteApprover" ColumnName="SubstituteApprover" />
+          <ScalarProperty Name="SubstituteApproverEmail" ColumnName="SubstituteApproverEmail" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attachments">
+      <EntityTypeMapping TypeName="Model.attachment">
+        <MappingFragment StoreEntitySet="attachments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="Attachment1" ColumnName="Attachment" />
+          <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="branches">
+      <EntityTypeMapping TypeName="Model.branch">
+        <MappingFragment StoreEntitySet="branches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="Model.country">
+        <MappingFragment StoreEntitySet="countries">
+          <ScalarProperty Name="num_code" ColumnName="num_code" />
+          <ScalarProperty Name="alpha_2_code" ColumnName="alpha_2_code" />
+          <ScalarProperty Name="alpha_3_code" ColumnName="alpha_3_code" />
+          <ScalarProperty Name="en_short_name" ColumnName="en_short_name" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="generalledgeraccounts">
+      <EntityTypeMapping TypeName="Model.generalledgeraccount">
+        <MappingFragment StoreEntitySet="generalledgeraccounts">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="IncomeBalanceSheet" ColumnName="IncomeBalanceSheet" />
+          <ScalarProperty Name="DirectPosting" ColumnName="DirectPosting" />
+          <ScalarProperty Name="BudgetedAmount" ColumnName="BudgetedAmount" />
+          <ScalarProperty Name="BalanceAtDate" ColumnName="BalanceAtDate" />
+          <ScalarProperty Name="DebitAmount" ColumnName="DebitAmount" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="IsBlocked" ColumnName="IsBlocked" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guarantors">
+      <EntityTypeMapping TypeName="Model.guarantor">
+        <MappingFragment StoreEntitySet="guarantors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LoanId" ColumnName="LoanId" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="Names" ColumnName="Names" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="StaffPayroll" ColumnName="StaffPayroll" />
+          <ScalarProperty Name="Signatory" ColumnName="Signatory" />
+          <ScalarProperty Name="MustSign" ColumnName="MustSign" />
+          <ScalarProperty Name="MustBePresent" ColumnName="MustBePresent" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="EntryType" ColumnName="EntryType" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WorkStation" ColumnName="WorkStation" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+          <ScalarProperty Name="Residence" ColumnName="Residence" />
+          <ScalarProperty Name="OtherBankers" ColumnName="OtherBankers" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="PINNumber" ColumnName="PINNumber" />
+          <ScalarProperty Name="AmountGuaranteed" ColumnName="AmountGuaranteed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loanprocucttypes">
+      <EntityTypeMapping TypeName="Model.loanprocucttype">
+        <MappingFragment StoreEntitySet="loanprocucttypes">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="RequiresMakerChecker" ColumnName="RequiresMakerChecker" />
+          <ScalarProperty Name="InterestCalculationType" ColumnName="InterestCalculationType" />
+          <ScalarProperty Name="MaximumLoanAmount" ColumnName="MaximumLoanAmount" />
+          <ScalarProperty Name="MaxRepaymentPeriodInMonths" ColumnName="MaxRepaymentPeriodInMonths" />
+          <ScalarProperty Name="MinimumDepositContribution" ColumnName="MinimumDepositContribution" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberbankaccounts">
+      <EntityTypeMapping TypeName="Model.memberbankaccount">
+        <MappingFragment StoreEntitySet="memberbankaccounts">
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberbeneficiaries">
+      <EntityTypeMapping TypeName="Model.memberbeneficiary">
+        <MappingFragment StoreEntitySet="memberbeneficiaries">
+          <ScalarProperty Name="IdentificationDocumentNumber" ColumnName="IdentificationDocumentNumber" />
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberkins">
+      <EntityTypeMapping TypeName="Model.memberkin">
+        <MappingFragment StoreEntitySet="memberkins">
+          <ScalarProperty Name="IdentificationDocumentNumber" ColumnName="IdentificationDocumentNumber" />
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberloanrepayments">
+      <EntityTypeMapping TypeName="Model.memberloanrepayment">
+        <MappingFragment StoreEntitySet="memberloanrepayments">
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="LoanId" ColumnName="LoanId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PaidBy" ColumnName="PaidBy" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="SourceAccountNumber" ColumnName="SourceAccountNumber" />
+          <ScalarProperty Name="PayingAccountNumber" ColumnName="PayingAccountNumber" />
+          <ScalarProperty Name="BankReference" ColumnName="BankReference" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="InstallmentAmount" ColumnName="InstallmentAmount" />
+          <ScalarProperty Name="InterestAmount" ColumnName="InterestAmount" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberloans">
+      <EntityTypeMapping TypeName="Model.memberloan">
+        <MappingFragment StoreEntitySet="memberloans">
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="LoanType" ColumnName="LoanType" />
+          <ScalarProperty Name="LoanAwardDate" ColumnName="LoanAwardDate" />
+          <ScalarProperty Name="LoanRepaymentDeadlineDate" ColumnName="LoanRepaymentDeadlineDate" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="InterestCalculationType" ColumnName="InterestCalculationType" />
+          <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+          <ScalarProperty Name="RepaymentPeriodInMonths" ColumnName="RepaymentPeriodInMonths" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="membermonthlycontributions">
+      <EntityTypeMapping TypeName="Model.membermonthlycontribution">
+        <MappingFragment StoreEntitySet="membermonthlycontribution">
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members">
+      <EntityTypeMapping TypeName="Model.member">
+        <MappingFragment StoreEntitySet="members">
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="AlternativeNumber" ColumnName="AlternativeNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="NationalIdNumber" ColumnName="NationalIdNumber" />
+          <ScalarProperty Name="TaxPIN" ColumnName="TaxPIN" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SourceOfIncome" ColumnName="SourceOfIncome" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+          <ScalarProperty Name="JobPosition" ColumnName="JobPosition" />
+          <ScalarProperty Name="PayrollNumber" ColumnName="PayrollNumber" />
+          <ScalarProperty Name="EmployerAddress" ColumnName="EmployerAddress" />
+          <ScalarProperty Name="EmployerTelephoneNumber" ColumnName="EmployerTelephoneNumber" />
+          <ScalarProperty Name="GrossMonthlyIncome" ColumnName="GrossMonthlyIncome" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="MembershipStatus" ColumnName="MembershipStatus" />
+          <ScalarProperty Name="MembershipType" ColumnName="MembershipType" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="membersavings">
+      <EntityTypeMapping TypeName="Model.membersaving">
+        <MappingFragment StoreEntitySet="membersavings">
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="SourceAccount" ColumnName="SourceAccount" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="DestinationAccount" ColumnName="DestinationAccount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="GLAccount" ColumnName="GLAccount" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="DebitAmount" ColumnName="DebitAmount" />
+          <ScalarProperty Name="TransactionAmount" ColumnName="TransactionAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="membersavingsaccounts">
+      <EntityTypeMapping TypeName="Model.membersavingsaccount">
+        <MappingFragment StoreEntitySet="membersavingsaccounts">
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="MembershipNumber" ColumnName="MembershipNumber" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="DebitAmount" ColumnName="DebitAmount" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="membersharecapitals">
+      <EntityTypeMapping TypeName="Model.membersharecapital">
+        <MappingFragment StoreEntitySet="membersharecapital">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="MemberNumber" ColumnName="MemberNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notifications">
+      <EntityTypeMapping TypeName="Model.notification">
+        <MappingFragment StoreEntitySet="notifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="EmailSubject" ColumnName="EmailSubject" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="IsEmailSent" ColumnName="IsEmailSent" />
+          <ScalarProperty Name="ReciepientMobileNumber" ColumnName="ReciepientMobileNumber" />
+          <ScalarProperty Name="SMSBody" ColumnName="SMSBody" />
+          <ScalarProperty Name="IsSMSSent" ColumnName="IsSMSSent" />
+          <ScalarProperty Name="DateTimeSent" ColumnName="DateTimeSent" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notificationtemplates">
+      <EntityTypeMapping TypeName="Model.notificationtemplate">
+        <MappingFragment StoreEntitySet="notificationtemplates">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Document" ColumnName="Document" />
+          <ScalarProperty Name="EmailTemplate" ColumnName="EmailTemplate" />
+          <ScalarProperty Name="SMSTemplate" ColumnName="SMSTemplate" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notificationtemplatesettings">
+      <EntityTypeMapping TypeName="Model.notificationtemplatesetting">
+        <MappingFragment StoreEntitySet="notificationtemplatesettings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NotificationTemplateId" ColumnName="NotificationTemplateId" />
+          <ScalarProperty Name="NotificationsEnabled" ColumnName="NotificationsEnabled" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="numberseries">
+      <EntityTypeMapping TypeName="Model.numbersery">
+        <MappingFragment StoreEntitySet="numberseries">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartingNumber" ColumnName="StartingNumber" />
+          <ScalarProperty Name="EndingNumber" ColumnName="EndingNumber" />
+          <ScalarProperty Name="LastUsedNumber" ColumnName="LastUsedNumber" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paymentsheaders">
+      <EntityTypeMapping TypeName="Model.paymentsheader">
+        <MappingFragment StoreEntitySet="paymentsheader">
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="DocumentDate" ColumnName="DocumentDate" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Payee" ColumnName="Payee" />
+          <ScalarProperty Name="Posted" ColumnName="Posted" />
+          <ScalarProperty Name="DateTimePosted" ColumnName="DateTimePosted" />
+          <ScalarProperty Name="PostedBy" ColumnName="PostedBy" />
+          <ScalarProperty Name="TotalPaymentAmount" ColumnName="TotalPaymentAmount" />
+          <ScalarProperty Name="PayingBankAccount" ColumnName="PayingBankAccount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="DimCode1" ColumnName="DimCode1" />
+          <ScalarProperty Name="DimCode2" ColumnName="DimCode2" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="TotalVATAmount" ColumnName="TotalVATAmount" />
+          <ScalarProperty Name="TotalWHTAmount" ColumnName="TotalWHTAmount" />
+          <ScalarProperty Name="TotalNetAmount" ColumnName="TotalNetAmount" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="ChequeType" ColumnName="ChequeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resources">
+      <EntityTypeMapping TypeName="Model.resource">
+        <MappingFragment StoreEntitySet="resources">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="Model.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="CanLogin" ColumnName="CanLogin" />
+          <ScalarProperty Name="IsMasterAdmin" ColumnName="IsMasterAdmin" />
+          <ScalarProperty Name="CanAddUser" ColumnName="CanAddUser" />
+          <ScalarProperty Name="CanAddKin" ColumnName="CanAddKin" />
+          <ScalarProperty Name="CanViewMemberProfile" ColumnName="CanViewMemberProfile" />
+          <ScalarProperty Name="CanEditUser" ColumnName="CanEditUser" />
+          <ScalarProperty Name="CanDeleteUser" ColumnName="CanDeleteUser" />
+          <ScalarProperty Name="CanAddSavings" ColumnName="CanAddSavings" />
+          <ScalarProperty Name="CanAddWithdrawal" ColumnName="CanAddWithdrawal" />
+          <ScalarProperty Name="CanAddBulkSavings" ColumnName="CanAddBulkSavings" />
+          <ScalarProperty Name="CanAddLoan" ColumnName="CanAddLoan" />
+          <ScalarProperty Name="CanAddLoanRepayment" ColumnName="CanAddLoanRepayment" />
+          <ScalarProperty Name="CanViewRepaymentHistory" ColumnName="CanViewRepaymentHistory" />
+          <ScalarProperty Name="CanViewLoanGuarantors" ColumnName="CanViewLoanGuarantors" />
+          <ScalarProperty Name="CanEditLoan" ColumnName="CanEditLoan" />
+          <ScalarProperty Name="CanDeleteLoan" ColumnName="CanDeleteLoan" />
+          <ScalarProperty Name="CanAddShares" ColumnName="CanAddShares" />
+          <ScalarProperty Name="CanViewShares" ColumnName="CanViewShares" />
+          <ScalarProperty Name="CanAddExpenses" ColumnName="CanAddExpenses" />
+          <ScalarProperty Name="CanEditExpenses" ColumnName="CanEditExpenses" />
+          <ScalarProperty Name="CanDeleteExpenses" ColumnName="CanDeleteExpenses" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="savingsaccounttypes">
+      <EntityTypeMapping TypeName="Model.savingsaccounttype">
+        <MappingFragment StoreEntitySet="savingsaccounttypes">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MinimumOpeningBalance" ColumnName="MinimumOpeningBalance" />
+          <ScalarProperty Name="MinimumMonthlyContributions" ColumnName="MinimumMonthlyContributions" />
+          <ScalarProperty Name="MaximumAmountWithdrawableInADay" ColumnName="MaximumAmountWithdrawableInADay" />
+          <ScalarProperty Name="WithdrawalCharge" ColumnName="WithdrawalCharge" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Signatories">
+      <EntityTypeMapping TypeName="Model.Signatory">
+        <MappingFragment StoreEntitySet="Signatories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupMembershipNo" ColumnName="GroupMembershipNo" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="Names" ColumnName="Names" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="StaffPayroll" ColumnName="StaffPayroll" />
+          <ScalarProperty Name="Signatory1" ColumnName="Signatory" />
+          <ScalarProperty Name="MustSign" ColumnName="MustSign" />
+          <ScalarProperty Name="MustBePresent" ColumnName="MustBePresent" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="EntryType" ColumnName="EntryType" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WorkStation" ColumnName="WorkStation" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+          <ScalarProperty Name="Residence" ColumnName="Residence" />
+          <ScalarProperty Name="OtherBankers" ColumnName="OtherBankers" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="PINNumber" ColumnName="PINNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="systemusers">
+      <EntityTypeMapping TypeName="Model.systemuser">
+        <MappingFragment StoreEntitySet="systemusers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="WindowsUsername" ColumnName="WindowsUsername" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sytemsettings">
+      <EntityTypeMapping TypeName="Model.sytemsetting">
+        <MappingFragment StoreEntitySet="sytemsettings">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="HomePage" ColumnName="HomePage" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="AfricasTalkingUsername" ColumnName="AfricasTalkingUsername" />
+          <ScalarProperty Name="AfricasTalkingAPIKey" ColumnName="AfricasTalkingAPIKey" />
+          <ScalarProperty Name="SMSNotificationsEnabled" ColumnName="SMSNotificationsEnabled" />
+          <ScalarProperty Name="SMTPServer" ColumnName="SMTPServer" />
+          <ScalarProperty Name="SMTPServerPort" ColumnName="SMTPServerPort" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailNotificationsEnabled" ColumnName="EmailNotificationsEnabled" />
+          <ScalarProperty Name="AutomaticDatabaseBackUpEnabled" ColumnName="AutomaticDatabaseBackUpEnabled" />
+          <ScalarProperty Name="DatabaseBackUpPath" ColumnName="DatabaseBackUpPath" />
+          <ScalarProperty Name="CredentialType" ColumnName="CredentialType" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedAt" ColumnName="LastModifiedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

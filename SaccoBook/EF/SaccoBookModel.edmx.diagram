@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="21282c02038f46cea7f7e2dcc8618aa5" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.appointment" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.appprovaldocumentsetting" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.approvalentry" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.approvaluser" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.attachment" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.branch" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.country" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.generalledgeraccount" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.guarantor" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.loanprocucttype" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.memberbankaccount" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.memberbeneficiary" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.memberkin" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.memberloanrepayment" Width="1.5" PointX="5.25" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.memberloan" Width="1.5" PointX="3" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.membermonthlycontribution" Width="1.5" PointX="3" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.member" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.membersaving" Width="1.5" PointX="3" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.membersavingsaccount" Width="1.5" PointX="3" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.membersharecapital" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.notification" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.notificationtemplate" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.notificationtemplatesetting" Width="1.5" PointX="11.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.numbersery" Width="1.5" PointX="7.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.paymentsheader" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.resource" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.role" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.savingsaccounttype" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Signatory" Width="1.5" PointX="3" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.systemuser" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sytemsetting" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_guarantors_memberloans1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_memberbankaccounts_members" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_memberbeneficiaries_members" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_memberkins_members" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_memberloanrepayments_memberloanrepayments" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_memberloans_members" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_membermonthlycontribution_members" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_membersavings_members" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_membersavingsaccounts_members" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Signatories_Signatories" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_membersavingsaccounts_membersavingsaccounts" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
